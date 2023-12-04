@@ -53,7 +53,7 @@ def withdraw(amount):
             f'Недостаточно средств. Сумма с комиссией {amount + int(percent)} у.е. На карте {int(bank_account)} у.е.')
 
 
-def exit():
+def finish():
     global bank_account, operations
     if bank_account > RICHNESS_SUM:
         percent = bank_account * RICHNESS_PERCENT
@@ -65,6 +65,6 @@ def exit():
 
 deposit(1000)
 withdraw(200)
-exit()
+finish()
 
 print(operations)
